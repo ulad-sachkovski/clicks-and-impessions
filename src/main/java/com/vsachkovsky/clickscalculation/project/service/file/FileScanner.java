@@ -3,9 +3,7 @@ package com.vsachkovsky.clickscalculation.project.service.file;
 import com.vsachkovsky.clickscalculation.project.event.NewFile;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -29,14 +27,14 @@ public class FileScanner {
     private static final String PATH_TO_FOLDER = "raw_data";
     private final ApplicationEventPublisher applicationEventPublisher;
 
-    @EventListener(ApplicationReadyEvent.class)
     @SuppressWarnings("unchecked")
-    public void scanForNewFiles() {
+    public void scanNewFiles() {
         try {
             Path path = Paths.get(PATH_TO_FOLDER);
             WatchService watchService = FileSystems.getDefault().newWatchService();
             path.register(watchService, ENTRY_CREATE);
-            scanForExistingFiles(path);
+
+            this.scanExistingFiles(path);
             log.info("Monitoring directory for new files: {}", path);
             while (true) {
                 WatchKey key = watchService.take();
@@ -58,12 +56,12 @@ public class FileScanner {
                 }
             }
         } catch (IOException | InterruptedException e) {
-            log.error("Error is: {}", e.getMessage());
+            log.error("Error while scanning the folder for new files: {}", e.getMessage());
             Thread.currentThread().interrupt();
         }
     }
 
-    private void scanForExistingFiles(Path path) {
+    private void scanExistingFiles(Path path) {
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
             for (Path entry : stream) {
                 log.info("Existing file: {}", entry.getFileName());

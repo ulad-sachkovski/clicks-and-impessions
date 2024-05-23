@@ -4,13 +4,14 @@ import com.vsachkovsky.clickscalculation.project.domain.FileMap;
 import com.vsachkovsky.clickscalculation.project.repository.FileMapRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
 @Slf4j
-@org.springframework.stereotype.Service
+@Service
 @RequiredArgsConstructor
 public class FileMapService {
 

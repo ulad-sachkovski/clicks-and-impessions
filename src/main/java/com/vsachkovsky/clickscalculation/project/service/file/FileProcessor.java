@@ -15,14 +15,14 @@ public class FileProcessor {
     private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
 
     public FileMap processNewFile(NewFile newFile) {
-        String[] s = newFile.getPath().split("_");
-        String action = s[0];
-        String dateTimeString = s[3];
-        String id = action + dateTimeString + s[4];
-        LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, DATE_FORMAT);
         String path = newFile.getPath();
+        String[] pathArray = path.split("_");
+        String action = pathArray[0];
+        String dateTimeString = pathArray[3];
+        String id = action + dateTimeString + pathArray[4];
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, DATE_FORMAT);
         FileMap fileMap = new FileMap(id, action, dateTime, path);
-        log.info("the file was processed: {}", fileMap);
+        log.info("the file was processed with path: {}", fileMap.getPath());
         return fileMap;
     }
 }
