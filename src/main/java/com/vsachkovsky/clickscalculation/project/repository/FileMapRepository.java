@@ -1,6 +1,6 @@
-package com.vsachkovsky.clickscalculation.test.repository;
+package com.vsachkovsky.clickscalculation.project.repository;
 
-import com.vsachkovsky.clickscalculation.test.domain.FileMap;
+import com.vsachkovsky.clickscalculation.project.domain.FileMap;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @org.springframework.stereotype.Repository

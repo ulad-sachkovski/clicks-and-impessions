@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.kafka;
+package com.vsachkovsky.clickscalculation.project.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;

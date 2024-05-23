@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.event;
+package com.vsachkovsky.clickscalculation.project.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

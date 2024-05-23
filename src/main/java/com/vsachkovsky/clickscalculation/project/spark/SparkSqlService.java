@@ -1,7 +1,7 @@
-package com.vsachkovsky.clickscalculation.test.spark;
+package com.vsachkovsky.clickscalculation.project.spark;
 
-import com.vsachkovsky.clickscalculation.test.domain.FileMap;
-import com.vsachkovsky.clickscalculation.test.pojo.UserAgentCount;
+import com.vsachkovsky.clickscalculation.project.domain.FileMap;
+import com.vsachkovsky.clickscalculation.project.pojo.UserAgentCount;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.spark.sql.SparkSession;

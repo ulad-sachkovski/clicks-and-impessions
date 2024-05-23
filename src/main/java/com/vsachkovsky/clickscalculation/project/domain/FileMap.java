@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.domain;
+package com.vsachkovsky.clickscalculation.project.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

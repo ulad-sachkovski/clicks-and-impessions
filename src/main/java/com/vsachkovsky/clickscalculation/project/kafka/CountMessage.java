@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.kafka;
+package com.vsachkovsky.clickscalculation.project.kafka;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

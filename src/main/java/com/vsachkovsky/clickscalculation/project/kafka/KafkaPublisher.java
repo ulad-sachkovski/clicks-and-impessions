@@ -1,8 +1,8 @@
-package com.vsachkovsky.clickscalculation.test.kafka;
+package com.vsachkovsky.clickscalculation.project.kafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vsachkovsky.clickscalculation.test.pojo.UserAgentCount;
+import com.vsachkovsky.clickscalculation.project.pojo.UserAgentCount;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

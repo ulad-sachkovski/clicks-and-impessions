@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.exception;
+package com.vsachkovsky.clickscalculation.project.exception;
 
 public class JsonException extends RuntimeException {
     public JsonException(String message) {

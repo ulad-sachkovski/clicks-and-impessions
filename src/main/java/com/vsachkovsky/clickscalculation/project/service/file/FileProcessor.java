@@ -1,7 +1,7 @@
-package com.vsachkovsky.clickscalculation.test.service.file;
+package com.vsachkovsky.clickscalculation.project.service.file;
 
-import com.vsachkovsky.clickscalculation.test.domain.FileMap;
-import com.vsachkovsky.clickscalculation.test.event.NewFile;
+import com.vsachkovsky.clickscalculation.project.domain.FileMap;
+import com.vsachkovsky.clickscalculation.project.event.NewFile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

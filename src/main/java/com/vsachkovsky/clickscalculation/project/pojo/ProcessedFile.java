@@ -1,4 +1,4 @@
-package com.vsachkovsky.clickscalculation.test.pojo;
+package com.vsachkovsky.clickscalculation.project.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

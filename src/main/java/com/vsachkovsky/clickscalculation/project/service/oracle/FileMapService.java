@@ -1,7 +1,7 @@
-package com.vsachkovsky.clickscalculation.test.service.oracle;
+package com.vsachkovsky.clickscalculation.project.service.oracle;
 
-import com.vsachkovsky.clickscalculation.test.domain.FileMap;
-import com.vsachkovsky.clickscalculation.test.repository.FileMapRepository;
+import com.vsachkovsky.clickscalculation.project.domain.FileMap;
+import com.vsachkovsky.clickscalculation.project.repository.FileMapRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Isolation;

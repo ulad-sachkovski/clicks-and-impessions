@@ -1,12 +1,12 @@
-package com.vsachkovsky.clickscalculation.test.service.mediator;
+package com.vsachkovsky.clickscalculation.project.service.mediator;
 
-import com.vsachkovsky.clickscalculation.test.domain.FileMap;
-import com.vsachkovsky.clickscalculation.test.event.NewFile;
-import com.vsachkovsky.clickscalculation.test.kafka.KafkaPublisher;
-import com.vsachkovsky.clickscalculation.test.pojo.UserAgentCount;
-import com.vsachkovsky.clickscalculation.test.service.file.FileProcessor;
-import com.vsachkovsky.clickscalculation.test.service.oracle.FileMapService;
-import com.vsachkovsky.clickscalculation.test.spark.SparkSqlService;
+import com.vsachkovsky.clickscalculation.project.domain.FileMap;
+import com.vsachkovsky.clickscalculation.project.event.NewFile;
+import com.vsachkovsky.clickscalculation.project.kafka.KafkaPublisher;
+import com.vsachkovsky.clickscalculation.project.pojo.UserAgentCount;
+import com.vsachkovsky.clickscalculation.project.service.file.FileProcessor;
+import com.vsachkovsky.clickscalculation.project.service.oracle.FileMapService;
+import com.vsachkovsky.clickscalculation.project.spark.SparkSqlService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
