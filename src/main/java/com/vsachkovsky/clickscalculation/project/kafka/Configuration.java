@@ -7,9 +7,12 @@ import org.springframework.kafka.config.TopicBuilder;
 @org.springframework.context.annotation.Configuration
 public class Configuration {
 
+    private static final String VIEW_TOPIC = "views";
+    private static final String IMPRESSIONS_TOPIC = "impressions";
+
     @Bean
     public NewTopic viewsTopic() {
-        return TopicBuilder.name("views")
+        return TopicBuilder.name(VIEW_TOPIC)
                 .partitions(1)
                 .replicas(1)
                 .build();
@@ -17,7 +20,7 @@ public class Configuration {
 
     @Bean
     public NewTopic clicksTopic() {
-        return TopicBuilder.name("clicks")
+        return TopicBuilder.name(IMPRESSIONS_TOPIC)
                 .partitions(1)
                 .replicas(1)
                 .build();
